@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Álbum Romántico</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>❤️ Nuestro Amor ❤️</h1>
+    <button onclick="cambiarFondo()">Cambiar fondo</button>
+  </header>
+
+
+  <main>
+    <!-- Galería de fotos -->
+    <section class="galeria">
+      <h2>Momentos especiales</h2>
+      <div class="imagenes">
+        <img src="img/foto1.jpg" alt="Foto 1" />
+        <img src="img/foto2.jpg" alt="Foto 2" />
+        <img src="img/foto3.jpg" alt="Foto 3" />
+      </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="carrusel">
+      <h2>Nuestros Recuerdos</h2>
+      <div class="slider">
+        <img src="img/foto4.jpg" alt="Foto 1">
+        <img src="img/foto5.jpg" alt="Foto 2">
+        <img src="img/foto6.jpg" alt="Foto 3">
+        <img src="img/foto7.jpg" alt="Foto 3"
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="videos">
+      <h2>Videos que amamos</h2>
+      <video controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+      <video controls>
+        <source src="videos/video3.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </section>
+
+    <!-- Dedicatoria -->
+    <section class="dedicatoria">
+      <h2>Escríbeme algo bonito 💌</h2>
+      <form onsubmit="mostrarDedicatoria(event)">
+        <textarea placeholder="Tu mensaje..." required></textarea>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="mensajeMostrado"></div>
+    </section>
+
+    <!-- Cuenta regresiva -->
+    <section class="contador">
+      <h2>Faltan para nuestro aniversario:</h2>
+      <div id="cuentaRegresiva"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con 💖 solo para ti</p>
+  </footer>
+
+  <div id="lightbox" onclick="cerrarLightbox()">
+    <img id="lightbox-img" src="" alt="Vista ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
